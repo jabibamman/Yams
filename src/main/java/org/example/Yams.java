@@ -13,6 +13,13 @@ public class Yams {
         boolean carre = false;
         boolean yams = false;
 
+        for (int count : counts) {
+            if (count == 5) {
+                return Figure.YAMS.getPoints();
+            }
+        }
+
+
         for (int faceIndex = 0; faceIndex < counts.length; faceIndex++) {
             if (counts[faceIndex] == 3) {
                 brelan = true;
@@ -25,9 +32,7 @@ public class Yams {
             }
         }
 
-        if (yams) {
-            return Figure.YAMS.getPoints();
-        } else if (carre) {
+        if (carre) {
             score = Figure.CARRE.getPoints();
         } else if (brelan && paire) {
             score = Figure.FULL.getPoints();
