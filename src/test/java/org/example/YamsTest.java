@@ -20,4 +20,12 @@ public class YamsTest {
         int score = Yams.score(des);
         assertEquals(35, score);
     }
+
+    // Full
+    @Test
+    public void should_return_30_when_1_1_1_2_2() {
+        int[] des = {1, 2, 1, 1, 2};
+        int score = Yams.score(des);
+        assertEquals(30, score);
+    }
 }
