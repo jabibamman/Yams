@@ -25,16 +25,14 @@ public class Yams {
             }
         }
 
-        if (brelan && paire) {
+        if (yams) {
+            return 50;
+        } else if (carre) {
+            score = 35;
+        } else if (brelan && paire) {
             score = 30;
         } else if (brelan) {
             score = 28;
-        } else if (paire) {
-            score = 0;
-        } else if (carre) {
-            score = 35;
-        } else if (yams) {
-            score = 50;
         }
 
         boolean isSuiteFromOneToFive = true;
@@ -48,6 +46,12 @@ public class Yams {
             score = 40;
         }
 
+        if (score == 0) {
+            for (int die : des) {
+                score += die;
+            }
+        }
+        
         return score;
     }
 }
