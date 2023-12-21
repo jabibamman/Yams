@@ -11,6 +11,7 @@ public class Yams {
         boolean brelan = false;
         boolean paire = false;
         boolean carre = false;
+        boolean yams = false;
 
         for (int faceIndex = 0; faceIndex < counts.length; faceIndex++) {
             if (counts[faceIndex] == 3) {
@@ -19,6 +20,8 @@ public class Yams {
                 paire = true;
             } else if (counts[faceIndex] == 4) {
                 carre = true;
+            } else if (counts[faceIndex] == 5) {
+                yams = true;
             }
         }
 
@@ -30,6 +33,8 @@ public class Yams {
             score = 0;
         } else if (carre) {
             score = 35;
+        } else if (yams) {
+            score = 50;
         }
 
         boolean isSuiteFromOneToFive = true;
