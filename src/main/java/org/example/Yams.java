@@ -19,16 +19,19 @@ public class Yams {
             }
         }
 
+        for (int count : counts) {
+            if (count == 4) {
+                return Figure.CARRE.getPoints();
+            }
+        }
+
+
 
         for (int faceIndex = 0; faceIndex < counts.length; faceIndex++) {
             if (counts[faceIndex] == 3) {
                 brelan = true;
             } else if (counts[faceIndex] == 2) {
                 paire = true;
-            } else if (counts[faceIndex] == 4) {
-                carre = true;
-            } else if (counts[faceIndex] == 5) {
-                yams = true;
             }
         }
 
