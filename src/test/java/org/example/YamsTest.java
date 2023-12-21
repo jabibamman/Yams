@@ -28,4 +28,19 @@ public class YamsTest {
         int score = Yams.score(des);
         assertEquals(30, score);
     }
+
+    // Grande suite
+    @Test
+    public void should_return_40_when_1_2_3_4_5() {
+        int[] des = {1, 2, 3, 4, 5};
+        int score = Yams.score(des);
+        assertEquals(40, score);
+    }
+
+    @Test
+    public void should_return_40_when_2_3_4_5_6() {
+        int[] des = {2, 3, 4, 5, 6};
+        int score = Yams.score(des);
+        assertEquals(40, score);
+    }
 }
