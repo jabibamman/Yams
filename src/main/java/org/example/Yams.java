@@ -26,13 +26,13 @@ public class Yams {
         }
 
         if (yams) {
-            return 50;
+            return Figure.YAMS.getPoints();
         } else if (carre) {
-            score = 35;
+            score = Figure.CARRE.getPoints();
         } else if (brelan && paire) {
-            score = 30;
+            score = Figure.FULL.getPoints();
         } else if (brelan) {
-            score = 28;
+            score = Figure.BRELAN.getPoints();
         }
 
         boolean isSuiteFromOneToFive = true;
