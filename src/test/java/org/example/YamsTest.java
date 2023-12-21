@@ -58,4 +58,19 @@ public class YamsTest {
         int score = Yams.score(des);
         assertEquals(50, score);
     }
+
+    // Chance
+    @Test
+    public void should_return_16_when_1_2_3_4_6() {
+        int[] des = {1, 2, 3, 4, 6};
+        int score = Yams.score(des);
+        assertEquals(16, score);
+    }
+
+    @Test
+    public void should_return_sum_of_dice_for_no_specific_figure() {
+        int[] des = {2, 3, 5, 6, 1};
+        int score = Yams.score(des);
+        assertEquals(17, score);
+    }
 }
