@@ -1,10 +1,10 @@
 package org.example;
 
 public class Yams {
-    public static int score(int[] des) {
+    public static int score(Dice des) {
         int score = 0;
         int[] counts = new int[6]; 
-        for (int die : des) {
+        for (int die : des.getValue()) {
             counts[die - 1]++;
         }
 
@@ -55,7 +55,7 @@ public class Yams {
         }
 
         if (score == 0) {
-            for (int die : des) {
+            for (int die : des.getValue()) {
                 score += die;
             }
         }
