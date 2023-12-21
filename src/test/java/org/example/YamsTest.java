@@ -43,4 +43,19 @@ public class YamsTest {
         int score = Yams.score(des);
         assertEquals(40, score);
     }
+
+    // Yams
+    @Test
+    public void should_return_50_when_1_1_1_1_1() {
+        int[] des = {1, 1, 1, 1, 1};
+        int score = Yams.score(des);
+        assertEquals(50, score);
+    }
+
+    @Test
+    public void should_return_50_when_2_2_2_2_2() {
+        int[] des = {2, 2, 2, 2, 2};
+        int score = Yams.score(des);
+        assertEquals(50, score);
+    }
 }
