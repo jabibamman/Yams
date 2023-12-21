@@ -11,8 +11,10 @@ public class Yams {
 
         if (score == 3) {
             score = 28;
+        } else if (score == 4) {
+            score = 35;
         }
-        
+
         return score;
     }
 }
